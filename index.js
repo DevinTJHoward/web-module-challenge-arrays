@@ -1,5 +1,7 @@
 /*REMEMBER TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
+const { arrayExpression } = require("@babel/types");
+
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
   "Banana Nut Fudge",
@@ -45,11 +47,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(array){
+  return [...array];
 }    
 
-
+//this spread method is really cool
 
 
 
@@ -64,8 +66,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+if (array.length === 31){
+  return true;
+}else{
+  return false;
+}
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +87,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, string){
+array.unshift(string);
+return array;
 }
 
 
@@ -97,10 +104,11 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array){
+ array.pop();
+ return array;
 }
-
+//.pop is one my favorite methods
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -114,9 +122,11 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(array, number){
+ return array[number];
 }
+
+// the [] hard brackets will take some time getting use to, a little hard to understand when to use them right now for me
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -134,9 +144,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
-}
+function removeFlavorByName(array, string)
+//   for(let i = 0, i < array.length; i++){
+//     if (array[i] === string){
+//       array.splice(i, 1)
+//     }
+//   }
+//   return array;
+// }
 
 
 
