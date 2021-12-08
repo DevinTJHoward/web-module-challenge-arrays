@@ -144,14 +144,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(array, string)
-//   for(let i = 0, i < array.length; i++){
-//     if (array[i] === string){
-//       array.splice(i, 1)
-//     }
-//   }
-//   return array;
-// }
+function removeFlavorByName(array , string){
+  for (let j = 0; j < array.length; j++)  {
+  if (array[j] === string){
+    array.splice(j, 1);
+  }
+}
+return array;
+}
 
 
 
@@ -178,6 +178,9 @@ Use the filterByWord function below to do the following:
 function filterByWord(/*your code here*/){
   /*your code here*/
 }
+
+
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
